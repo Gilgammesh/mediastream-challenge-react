@@ -3,25 +3,47 @@
   color: var(--white);
   min-height: 100vh;
   padding: 2em;
+  background-image: url('./mountains.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  background-position: 0px -150px;
 }
 
 .movie-library__title {
   font-size: 2em;
   margin-bottom: 1em;
+  font-weight: 600;
 }
 
 .movie-library__actions {
   display: flex;
   margin-bottom: 1em;
+  height: 30px;
 }
 
 .movie-library__actions select {
   width: 100%;
-  padding: .25em;
+  padding: 0.25em;
+  border-bottom: 1px solid #74d702;
+  border-top: 1px solid #74d702;
+  border-left: 1px solid #74d702;
+  border-right: none;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 .movie-library__actions button {
   white-space: nowrap;
+  cursor: pointer;
+  background-color: #98d702;
+  border-bottom: 1px solid #74d702;
+  border-top: 1px solid #74d702;
+  border-right: 1px solid #74d702;
+  border-left: none;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  width: 150px;
 }
 
 .movie-library__loading {
@@ -35,23 +57,53 @@
 .movie-library__list {
   padding: 1em;
   background-color: #222222;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }
 
 .movie-library__card {
-  background-color: #333333;
+  position: relative;
   margin-bottom: 1em;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+ 
 }
 
 .movie-library__card img {
-  width: 10em;
+  position: absolute;
+  width: 250px;
+  height: 375px;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .movie-library__card ul {
-  padding: 1em;
+  position: relative;
+  background: rgba(0, 0, 0, 0);
+  width: 250px;
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(152, 215, 2, 1) 100%);
+  border-radius: 10px;
 }
 
-.movie-library__card li {
-  line-height: 120%;
+.movie-library__card-title {
+  padding: 4px 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.movie-library__card-genres {
+  padding: 3px 10px;
+  font-size: 12px;
+}
+
+.movie-library__card-year {
+  padding: 3px 10px;
+  font-size: 12px;
+  margin-bottom: 10px;
 }
